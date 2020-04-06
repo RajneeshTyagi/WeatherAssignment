@@ -60,7 +60,7 @@ dependencies {
 
     implementation "android.arch.lifecycle:extensions:$lifecycleExtensionVersion"
     implementation 'org.greenrobot:eventbus:3.1.1'
-    annotationProcessor "com.android.databinding:compiler:$kotlin_version"
+    kapt  "com.android.databinding:compiler:$kotlin_version"
 
 
 }

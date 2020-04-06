@@ -8,6 +8,7 @@ data class EventBusModel(
     var obj: Any? = null,
     var flag: Int = 0
 ) : Serializable
+
 data class Request(var type: String, var query: String, var language: String)
 data class Location(
     var name: String,
@@ -27,7 +28,7 @@ data class Current(
     var weather_descriptions: ArrayList<String>,
     var wind_speed: String,
     var wind_degree: Int,
-    var wind_dir: Int,
+    var wind_dir: String,
     var pressure: Int,
     var precip: Int,
     var humidity: Int,
