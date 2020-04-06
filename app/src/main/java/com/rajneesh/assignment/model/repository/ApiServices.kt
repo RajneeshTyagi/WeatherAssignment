@@ -7,5 +7,10 @@ import retrofit2.http.Query
 
 interface ApiServices {
     @GET("current")
-    fun getLocationWhetherData(@Query("access_key") access_key: String, @Query("query") query: String): Observable<WhetherResponseModel>
+    fun getLocationWhetherData(
+        @Query("access_key") access_key: String,
+        @Query("query") query: String
+    ): Observable<WhetherResponseModel> //    With RX java
+//        Coroutines Api call
+//    fun getLocationWhetherData(@Query("access_key") access_key: String, @Query("query") query: String): WhetherResponseModel
 }

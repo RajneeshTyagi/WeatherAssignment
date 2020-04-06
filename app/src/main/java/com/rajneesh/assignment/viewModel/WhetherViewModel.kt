@@ -16,6 +16,7 @@ class WhetherViewModel : ViewModel {
     private var request = MutableLiveData<Request>()
     private var location = MutableLiveData<Location>()
     private var current = MutableLiveData<Current>()
+
     @Inject
     lateinit var repositoryCalls: RepositoryCalls
 
@@ -27,6 +28,16 @@ class WhetherViewModel : ViewModel {
     fun getLocation() = location
     fun getCurrent() = current
     fun getCurrentWhether() {
+//        Coroutines Api call
+//        viewModelScope.launch(Dispatchers.IO) {
+//            println("Thread Name is :- ${Thread.currentThread().name}")
+//            try {
+//                repositoryCalls.getLocationWhetherData("New Delhi")
+//            } catch (e: java.lang.Exception) {
+//            }
+//        }
+
+//    With RX java
         repositoryCalls.getLocationWhetherData(object : Observer<Any> {
             override fun onComplete() {
 
